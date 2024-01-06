@@ -1,114 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="10dp">
+    android:layout_height="wrap_content"
+    android:background="#D6D6D6"
+    android:orientation="vertical">
 
-
-    <LinearLayout
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rl_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/updateshedulerectanglebox"
-        android:orientation="vertical"
-        android:paddingLeft="15dp"
-        android:elevation="5dp">
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="5dp">
 
-        <TextView
-            android:id="@+id/schedule_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:layout_marginTop="10dp"/>
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_margin="1dp">
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/schedule_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:text="Description: "/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:lineBreakWordStyle="phrase"
+                android:lines="1"
+                android:text="Title"
+                android:textSize="26dp" />
+
             <TextView
-                android:id="@+id/schedule_description"
-                android:layout_width="wrap_content"
+                android:id="@+id/schedule_decription"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp" />
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:text="Venue: "/>
+                android:layout_below="@id/schedule_title"
+                android:text="Description"
+                />
             <TextView
                 android:id="@+id/schedule_venue"
-                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:layout_below="@id/schedule_decription"
+                android:text="venue"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/schedule_date"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:text="Date / Time: "/>
+                android:layout_below="@id/schedule_venue"
+                android:text="date"
+                />
             <TextView
-                android:id="@+id/Schedule_date"
-                android:layout_width="wrap_content"
+                android:id="@+id/study_mode"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:layout_below="@id/schedule_date"
+                android:text="mode"
+                />
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/schedule_author"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:text="Author: "/>
-            <TextView
-                android:id="@+id/Schedule_Author"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16dp" />
-        </LinearLayout>
+                android:layout_below="@id/study_mode"
+                android:text="Author"
+                />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:text="Study Mode: "/>
-            <TextView
-                android:id="@+id/Study_Mode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16dp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-
-
-</LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
